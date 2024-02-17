@@ -1,0 +1,99 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": -7893602878806676658
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -1205794990128055699
+  },
+  "m_Name": "",
+  "EnableUpdate": 1,
+  "StartState": "1",
+  "States": [
+    {
+      "StateName": "1",
+      "NextStateName": "",
+      "Loop": 1,
+      "Curves": [
+        {
+          "Key": 0,
+          "StartValue": -0.01,
+          "EndValue": 0.01,
+          "StartVector": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "EndVector": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "Duration": 0.05,
+          "Curve": {
+            "m_Curve": [
+              {
+                "time": 0.0,
+                "value": 1.0,
+                "inSlope": "Infinity",
+                "outSlope": 2.0,
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 0.33333334
+              },
+              {
+                "time": 0.5,
+                "value": 0.0,
+                "inSlope": "Infinity",
+                "outSlope": "Infinity",
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 0.33333334
+              },
+              {
+                "time": 1.0,
+                "value": 0.0,
+                "inSlope": 0.0,
+                "outSlope": 0.0,
+                "weightedMode": 0,
+                "inWeight": 0.33333334,
+                "outWeight": 0.33333334
+              }
+            ],
+            "m_PreInfinity": 2,
+            "m_PostInfinity": 2,
+            "m_RotationOrder": 0
+          }
+        }
+      ]
+    }
+  ],
+  "MixTime": 0.2,
+  "TimeScale": 1.0,
+  "Sprite": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "customSprite": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "UnitySprite": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "NGUILabel": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "IsSharedMaterialControl": 0,
+  "CustomShaderColorKey": "",
+  "IsViewportSpace": 0,
+  "textureTiling": {
+    "x": 1.0,
+    "y": 1.0
+  },
+  "UseUnscaledTime": 0
+}

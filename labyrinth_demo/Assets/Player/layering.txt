@@ -1,0 +1,12 @@
+Head : 10
+Body : 3
+
+armR : 4 elbowR : 5
+armL : 1 elbowL : 1
+
+legR : 2
+legL : 2
+
+Weapon : 4
+
+capeF : 11     capeR : 9    capeL : 1

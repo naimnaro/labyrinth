@@ -1,0 +1,208 @@
+using UnityEngine;
+
+
+public class enemy_patrol1 : MonoBehaviour
+{
+    public int enemy_hp = 100;
+
+
+    public float moveSpeed = 2f;
+    public float minMoveDistance = 4.0f; // Minimum move distance.
+    public float maxMoveDistance = 8.0f; // Maximum move distance.
+    public float patrolRange = 12.0f; // The total range within which the NPC can move.
+
+    public float jumpForce = 3.0f;     // The force applied when jumping
+    public float gravity = 9.8f;        // Gravity force
+    public float jumpInterval = 0.5f;   // Time interval for jumping
+    private float jumpTimer = 0f;       // Timer for tracking jumping interval
+    private bool isJumping = false;
+
+
+    public float chaseRange = 5.0f;
+
+    private Vector3 initialPosition;
+    private float moveDistance; // The random move distance.
+    private float currentMoveDistance; // The distance moved in the current direction.
+    private bool movingRight = true;
+
+    private bool isChasing = false;
+    private Transform playerTransform;
+
+    private void Start()
+    {
+
+       
+
+
+        initialPosition = transform.position;
+        GenerateRandomMoveDistance();
+        currentMoveDistance = 0f; // Initialize current move distance to zero.
+        playerTransform = GameObject.FindGameObjectWithTag("playerdetect").transform;
+    }
+
+    private void Update()
+    {
+        
+        jumpTimer += Time.deltaTime;
+
+        // Check if it's time to jump
+        if (jumpTimer >= jumpInterval)
+        {
+            isJumping = true;
+            jumpTimer = 0f; // Reset the timer
+        }
+
+        // Perform jumping if the slime is currently jumping
+        if (isJumping)
+        {
+            Jump();
+        }
+        float distanceToPlayer = Vector3.Distance(transform.position, playerTransform.position);
+
+        if (distanceToPlayer < chaseRange)
+        {
+            // Player is within chase range, switch to chasing mode
+            isChasing = true;
+        }
+
+        if (isChasing)
+        {
+            // Chasing mode
+            ChasePlayer();
+        }
+        else
+        {
+            // Patrol mode
+            Patrol();
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+
+        // Check if the collision is with an enemy
+        if (collision.transform.CompareTag("playerweapon"))
+        {
+            enemy_hp -= DemoScene.player_damage;
+            
+
+            
+
+            if (enemy_hp <= 0)
+            {
+                // Call a method to handle the enemy's death
+                Die();
+            }
+
+
+
+        }
+
+    }
+
+    private void Die()
+    {
+        // Implement actions when the enemy dies
+        Debug.Log("Enemy defeated!");
+        Destroy(gameObject);  // For example, destroy the enemy GameObject
+    }
+
+    private void ChasePlayer()
+    {
+        Vector3 direction = (playerTransform.position - transform.position).normalized;
+
+        // Move towards the player
+        transform.position += direction * moveSpeed * Time.deltaTime;
+
+        // Flip the direction if needed (similar to your Flip method)
+        Flip();
+
+        
+    }
+
+    void Patrol()
+    {
+        // Calculate the new position based on the current movement direction
+        Vector3 newPosition = transform.position + (movingRight ? Vector3.right : Vector3.left) * moveSpeed * Time.deltaTime;
+
+        // Calculate the distance from the initial position
+        float distanceFromInitial = Vector3.Distance(newPosition, initialPosition);
+
+        // Check if the NPC has moved beyond the random move distance
+        if (distanceFromInitial >= moveDistance)
+        {
+            // Clamp the NPC's position to stay within the patrol range
+            newPosition.x = Mathf.Clamp(newPosition.x, initialPosition.x - patrolRange / 2, initialPosition.x + patrolRange / 2);
+
+            // Calculate the remaining distance to the patrol range boundary
+            float remainingDistance = Mathf.Abs(newPosition.x - (initialPosition.x + (movingRight ? patrolRange / 2 : -patrolRange / 2)));
+
+            // If the remaining distance is less than the random move distance, change direction
+            if (remainingDistance < moveDistance)
+            {
+                movingRight = !movingRight;
+
+                // Generate a new random move distance
+                GenerateRandomMoveDistance();
+
+                // Reset the current move distance
+                currentMoveDistance = 0f;
+            }
+        }
+
+        // Move the NPC
+        transform.position = newPosition;
+
+        // Update the current move distance
+        currentMoveDistance += moveSpeed * Time.deltaTime;
+
+        // Flip the NPC's direction based on movement
+        Flip();
+
+        
+    }
+
+    private void Jump()
+    {
+        // Calculate the target position for the jump
+        Vector2 targetPosition = new Vector2(transform.position.x, initialPosition.y + jumpForce);
+
+        // Interpolate towards the target position
+        transform.position = Vector2.Lerp(transform.position, targetPosition, Time.deltaTime * 2f); // Adjust the multiplier for the desired speed
+
+        // If the slime is close to the target position, stop jumping
+        if (Mathf.Approximately(transform.position.y, targetPosition.y))
+        {
+            transform.position = targetPosition;
+            isJumping = false;
+        }
+    }
+    private void GenerateRandomMoveDistance()
+    {
+        // Generate a random move distance between minMoveDistance and maxMoveDistance
+        moveDistance = Random.Range(minMoveDistance, maxMoveDistance);
+    }
+
+    private void Flip()
+    {
+        // Change the NPC's direction (flip its sprite or model)
+        Vector3 scale = transform.localScale;
+        scale.x = movingRight ? Mathf.Abs(scale.x) : -Mathf.Abs(scale.x);
+        transform.localScale = scale;
+    }
+
+    private bool IsGrounded()
+    {
+        // Adjust the radius and position based on your slime's size and position
+        float radius = 0.1f;
+        Vector2 checkPosition = new Vector2(transform.position.x, transform.position.y - radius);
+
+        // Check for overlap with objects in the "Ground" layer
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(checkPosition, radius, LayerMask.GetMask("Ground"));
+
+        // If there's at least one collider in the array, the slime is grounded
+        return colliders.Length > 0;
+    }
+
+   
+}

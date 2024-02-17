@@ -1,0 +1,34 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": -3310115477542015143
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 6213266070455448308
+  },
+  "m_Name": "",
+  "ShaderPairList": [
+    {
+      "OriginalShader": {
+        "m_FileID": 2,
+        "m_PathID": 4003492118169703284
+      },
+      "UIShader": {
+        "m_FileID": 2,
+        "m_PathID": 8193986958898331860
+      },
+      "UINoBendShader": {
+        "m_FileID": 3,
+        "m_PathID": 10721
+      },
+      "NoBendMaskShader": {
+        "m_FileID": 0,
+        "m_PathID": -2375511454877481359
+      }
+    }
+  ],
+  "axisFollowerBoneName": "b.w2_axis",
+  "scaleFollowerBoneName": "[base]weapon2"
+}

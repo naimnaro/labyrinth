@@ -6,6 +6,27 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/Title.unity
+    guid: 7e7bc9fe07767554a88ba7da68922d13
+  - enabled: 1
+    path: Assets/Scenes/Login.unity
+    guid: 0317f8ad4ce6f324788d19013e5ca2aa
+  - enabled: 1
+    path: Assets/Scenes/LoadingScene.unity
+    guid: 6bebea9834c9f424782ccffdcd1c0a27
+  - enabled: 1
+    path: Assets/Scenes/village1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/select_dugeon.unity
+    guid: 6d9fcb0d4852d704dbff06b1f639633e
+  - enabled: 1
+    path: Assets/Scenes/Dungeon1.unity
+    guid: 89073f5a258c7974fae4a6767395d6f1
+  - enabled: 1
+    path: Assets/Scenes/Dungeon2.unity
+    guid: 44240fe5659b3164daa53d8b3d330716
+  - enabled: 1
+    path: Assets/Scenes/dead.unity
+    guid: 6466aaa9ef97bac43bd852946c0ab725
   m_configObjects: {}

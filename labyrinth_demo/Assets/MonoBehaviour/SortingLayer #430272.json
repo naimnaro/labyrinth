@@ -1,0 +1,18 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": -947206011650862297
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": -2522728718754641773
+  },
+  "m_Name": "",
+  "renderer": {
+    "m_FileID": 0,
+    "m_PathID": -836135338011136633
+  },
+  "layerName": "Default",
+  "order": -3
+}

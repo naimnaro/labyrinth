@@ -1,0 +1,18 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": -5222540656737358763
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 3991389912023517775
+  },
+  "m_Name": "",
+  "slot": {
+    "m_FileID": 0,
+    "m_PathID": -6664933793451863193
+  },
+  "weapon1SpriteName": "head_crusher",
+  "weapon2SpriteName": ""
+}

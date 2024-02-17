@@ -3,14 +3,36 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - ground
+  - background
+  - Background
+  - CHEST1
+  - CHEST
+  - PLAYER
+  - FieldItem
+  - WOW
+  - Villager1
+  - Villager2
+  - knight1
+  - knight2
+  - enemy
+  - playerdetect
+  - playerweapon
+  - player_damaged
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player and Npc
   - Water
   - UI
+  - ground
+  - player
+  - trigger
+  - onewayplatform
+  - enemy
+  - playerweapon
   - 
   - 
   - 
@@ -30,14 +52,11 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - test1
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Login_panel_layer
+    uniqueID: 2177139135
     locked: 0
