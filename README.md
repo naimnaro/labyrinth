@@ -6,6 +6,12 @@ Unity + FirebaseDB<br> <br>
 <br>계정과 회원가입/로그인/인벤토리를 구현했습니다.
 <br>사진 클릭시 구현영상링크로 이동합니다.
 
-Firestore : 
+___
+
+Firestore cloud : 클라우드 기반의 NoSQL DB 입니다. 
+<br>
+### **Collection** (playernickname) - **Document** (playerstats, inventory, EquippedUI) - **Field** (Hp, item ID etc..)
+
+
 
 
