@@ -11,7 +11,8 @@ ___
 # Firestore cloud : 클라우드 기반의 NoSQL DB 입니다. 
 <br>
 Collection(playernickname) - Document(playerstats, inventory, EquippedUI) - Field (Hp, item ID etc..)
-![이미지 설명](labyrinth_images/Firebase1.png)
+
+<img src ="https://github.com/naimnaro/labyrinth/assets/133749784/f65d971e-05d0-481e-877f-5fb1d5efe16c">
 
 
 
