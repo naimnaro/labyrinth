@@ -1,5 +1,5 @@
 # labyrinth
-Unity + FirebaseDB<br> <br>
+### Unity + FirebaseDB<br> <br>
 [![YouTube Thumbnail](https://img.youtube.com/vi/oBQMDn2fYU8/0.jpg)](https://www.youtube.com/watch?v=oBQMDn2fYU8)
 <br>
 <br>유니티로 만든 2D 게임에 파이어베이스 db (Nosql)를 연동해
@@ -8,9 +8,9 @@ Unity + FirebaseDB<br> <br>
 
 ___
 
-Firestore cloud : 클라우드 기반의 NoSQL DB 입니다. 
+### Firestore cloud : 클라우드 기반의 NoSQL DB 입니다. 
 <br>
-### **Collection** (playernickname) - **Document** (playerstats, inventory, EquippedUI) - **Field** (Hp, item ID etc..)
+# **Collection** (playernickname) - **Document** (playerstats, inventory, EquippedUI) - **Field** (Hp, item ID etc..)
 
 
 
