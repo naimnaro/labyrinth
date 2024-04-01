@@ -8,7 +8,7 @@
 
 ___
 
-# Firestore cloud : 클라우드 기반의 NoSQL DB 입니다. 
+Firestore cloud : 클라우드 기반의 NoSQL DB 입니다. 
 <br>
 Collection(playernickname) - Document(playerstats, inventory, EquippedUI) - Field (Hp, item ID etc..)
 
