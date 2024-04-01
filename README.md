@@ -1,7 +1,8 @@
 ### labyrinth
 ### Unity + FirebaseDB<br> <br>
- [![Video](https://img.shields.io/badge/Video-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/watch?v=oBQMDn2fYU8)
+ [![Video](https://img.shields.io/badge/Video-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/watch?v=oBQMDn2fYU8) 
 ___
+
 ### [![YouTube Thumbnail](https://img.youtube.com/vi/oBQMDn2fYU8/0.jpg)](https://www.youtube.com/watch?v=oBQMDn2fYU8)
 ___
 유니티로 만든 2D 게임에 파이어베이스 db (Nosql)를 연동해
