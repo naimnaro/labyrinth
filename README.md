@@ -12,6 +12,10 @@ Firestore cloud : 클라우드 기반의 NoSQL DB 입니다.
 <br>
 Collection(playernickname) - Document(playerstats, inventory, EquippedUI) - Field (Hp, item ID etc..)
 
+Firebase authentification 를 사용해 이메일/비밀번호 기반 회원가입을 구현하고, 최초 로그인한 계정은 
+"playernickname" 을 설정합니다. playerncikname 을 기반으로 collection 들이 생성되고 
+문서형 db가 만들어집니다.
+
 <img src ="https://github.com/naimnaro/labyrinth/assets/133749784/f65d971e-05d0-481e-877f-5fb1d5efe16c">
 
 
