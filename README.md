@@ -1,4 +1,4 @@
-### labyrinth
+# labyrinth
 ### Unity + FirebaseDB<br> <br> 
  [![Video](https://img.shields.io/badge/Video-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/watch?v=oBQMDn2fYU8) 
 
