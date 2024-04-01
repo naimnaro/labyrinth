@@ -6,4 +6,6 @@ Unity + FirebaseDB<br> <br>
 <br>계정과 회원가입/로그인/인벤토리를 구현했습니다.
 <br>사진 클릭시 구현영상링크로 이동합니다.
 
+Firestore : 
+
 
